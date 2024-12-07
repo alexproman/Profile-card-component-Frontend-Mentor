@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:wght@400;700&family=Young+Serif&display=swap');
+:root {
+/* Colors */
+--White: #ffffff;
+--Dark-cyan: #19a2ae;
+--Very-dark-blue: #2d3248;
+--Dark-blue: #6a6f81;
+--Dark-gray: #969696;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 18px;
+    font-family: "Kumbh Sans", serif;
+}
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--Dark-cyan);
+}
+.bg-imgs {
+    z-index: -1;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: relative;
+    overflow: hidden;
+}
+.bg-imgs .top,.bg-imgs .bottom {
+    position: absolute;
+}
+.top {
+    top:-600px;
+    left:-100px;
+}
+.bottom {
+    bottom: -600px;
+    right: -200px;
+    
+}
+@media (max-width:768px) {
+    .top {
+        top:-600px;
+        left:-700px;
+    }
+    .bottom {
+        bottom: -600px;
+        right: -700px;
+        
+    }
+    
+}
+
+.card {
+    width: 350px;
+    height: 370px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    background-color: var(--White);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+   
+}
+.card-header {
+    position: relative;
+}
+.avatar-img {
+    position: absolute;
+    bottom: -101px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.person-info {
+    height: 140px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.person-info .name {
+    margin-top: 40px;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: var(--Very-dark-blue);
+}
+.person-info .name .age, .locaition {
+    padding: 0 10px;
+    color: var(--Dark-gray);
+    font-weight: 400;
+}
+.person-info .locaition {
+    font-size: .8rem;
+}
+
+
+.social-data {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+
+}
+.followers,
+.likes,
+.photos {
+    text-align: center;
+    
+}
+.social-data .count {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: var(--Very-dark-blue);
+}
+.social-data span {
+    font-weight: 400;
+    font-size: .6rem;
+    color: var(--Dark-gray);
+    letter-spacing: 1px;
+}
+
+.attribution {
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    font-size: 12px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(227, 97%, 13%);
+  }
